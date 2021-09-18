@@ -56,7 +56,7 @@ func (s Stack) Size() int {
 }
 
 func TestStack(t *testing.T) {
-	t.Run("Regular pops", func(t *testing.T) {
+	t.Run("pop one", func(t *testing.T) {
 		s := Stack{}
 		assert.Equal(t, s.Size(), 0)
 
@@ -96,7 +96,7 @@ func TestStack(t *testing.T) {
 		assert.Equal(t, s.Size(), 0)
 	})
 
-	t.Run("multiple pops", func(t *testing.T) {
+	t.Run("pop multiple", func(t *testing.T) {
 		s := Stack{}
 		assert.Equal(t, s.Size(), 0)
 
