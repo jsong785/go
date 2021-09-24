@@ -17,6 +17,10 @@ func (d *Data) Multiply(val int) {
 	d.val *= val
 }
 
+func (d Data) Subtract(val int) {
+	d.val -= val
+}
+
 func TestMethodExpressions(t *testing.T) {
 
 	data := Data{val: 1}
@@ -27,5 +31,9 @@ func TestMethodExpressions(t *testing.T) {
 
 	addFunc := data.Add
 	addFunc(10)
+	assert.Equal(t, 16, data.val)
+
+	noop := data.Subtract
+	noop(10)
 	assert.Equal(t, 16, data.val)
 }
